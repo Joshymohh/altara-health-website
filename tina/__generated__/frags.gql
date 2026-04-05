@@ -1,0 +1,17 @@
+fragment PostParts on Post {
+  __typename
+  title
+  slug
+  date
+  category
+  author
+  authorImage
+  featuredImage
+  videoUrl
+  excerpt
+  content
+  featured
+  suggestedProducts
+  seoTitle
+  seoDescription
+}

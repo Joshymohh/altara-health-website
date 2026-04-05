@@ -30,5 +30,15 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    "Altara-health-homepage-2-14-26",
+    "altara-about-us-page",
+    "altara-blog-page",
+    "blog-page-template",
+    "Altara Product Details Page ",
+    "website",
+    "altara-product-details-page",
+    "Blog Template Page "
+  ]
 }

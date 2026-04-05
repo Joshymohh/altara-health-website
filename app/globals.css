@@ -1,26 +1,439 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-lora: "Lora", Georgia, serif;
+  --font-montserrat: "Montserrat", system-ui, sans-serif;
+
+  --background: #F5F5F0;
+  --foreground: #231f20;
+  --card: #ffffff;
+  --card-foreground: #231f20;
+  --popover: #ffffff;
+  --popover-foreground: #231f20;
+  --primary: #1a3a4a;
+  --primary-foreground: #F5F5F0;
+  --secondary: #e8e8e3;
+  --secondary-foreground: #231f20;
+  --muted: #e8e8e3;
+  --muted-foreground: #6b6b6b;
+  --accent: #5a8a7a;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: #d4d4cf;
+  --input: #d4d4cf;
+  --ring: #1a3a4a;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: #F5F5F0;
+  --sidebar-foreground: #231f20;
+  --sidebar-primary: #1a3a4a;
+  --sidebar-primary-foreground: #F5F5F0;
+  --sidebar-accent: #e8e8e3;
+  --sidebar-accent-foreground: #231f20;
+  --sidebar-border: #d4d4cf;
+  --sidebar-ring: #1a3a4a;
+  --bone: 48 20% 95%;
+  --sage: 80 20% 72%;
+  --success: 142 71% 45%;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
 }
 
 @theme inline {
+  --font-sans: var(--font-montserrat), system-ui, sans-serif;
+  --font-serif: var(--font-lora), Georgia, serif;
+  --font-mono: ui-monospace, monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    height: auto;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Lora for H1 blog titles — use class font-serif or .font-lora */
+.font-lora {
+  font-family: var(--font-lora), Georgia, serif;
+}
+
+/* Blog post body prose (editorial: black type, Lora headings) */
+.prose-blog {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+}
+.prose-blog a {
+  @apply font-medium text-[#326ea2] underline decoration-[#326ea2]/40 underline-offset-4 transition-colors hover:decoration-[#326ea2];
+}
+/* Heading styles live in blog-markdown.tsx components (avoids cascade fighting Tailwind on h2–h6) */
+.prose-blog p {
+  @apply text-[18px] font-normal leading-[1.7] text-black;
+}
+.prose-blog p + p {
+  @apply mt-6;
+}
+.prose-blog ul {
+  @apply my-4 space-y-3 pl-6;
+}
+.prose-blog li {
+  @apply flex items-start gap-3 text-[18px] leading-[1.7] text-black;
+}
+.prose-blog blockquote {
+  @apply my-8 border-l-4 border-[#326ea2] py-2 pl-6 italic;
+}
+.prose-blog blockquote p {
+  @apply text-[#666666];
+}
+
+/* Brand lockup: Lora italic light (e.g. "Altara Health" under logo) */
+.brand-text {
+  font-family: var(--font-lora), Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* Shimmer hover: Black -> White -> Deep Sea Blue */
+@keyframes shimmer-dark {
+  0% { color: currentColor; }
+  40% { color: #ffffff; }
+  100% { color: #003366; }
+}
+
+@keyframes shimmer-light {
+  0% { color: currentColor; }
+  40% { color: #003366; }
+  100% { color: #ffffff; }
+}
+
+.shimmer-link {
+  transition: color 0.15s ease;
+}
+.shimmer-link:hover {
+  animation: shimmer-dark 0.45s ease forwards;
+}
+
+.shimmer-link-light {
+  transition: color 0.15s ease;
+}
+.shimmer-link-light:hover {
+  animation: shimmer-light 0.45s ease forwards;
+}
+
+/* Left-to-right rolling shimmer on hover (sweep across button) */
+@keyframes shimmer-cta-sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.shimmer-cta {
+  position: relative;
+  overflow: hidden;
+  transition: filter 0.2s ease, box-shadow 0.2s ease;
+}
+.shimmer-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 65%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  transform: translateX(-100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+.shimmer-cta:hover::after {
+  animation: shimmer-cta-sweep 0.6s ease forwards;
+}
+
+/* Homepage hero — white CTA buttons */
+@keyframes hero-cta-text-shimmer {
+  0% {
+    color: #000000;
+  }
+  40% {
+    color: #ffffff;
+  }
+  100% {
+    color: #003366;
+  }
+}
+
+.hero-cta {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 65%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: hero-cta-text-shimmer 0.75s ease forwards;
+}
+.hero-cta:hover::after {
+  animation: shimmer-cta-sweep 0.75s ease forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta:hover {
+    transform: none;
+    animation: none;
+    box-shadow: none;
+  }
+  .hero-cta:hover::after {
+    animation: none !important;
+  }
+}
+
+/* Homepage Kit newsletter — white / navy sweep on hover */
+@keyframes newsletter-kit-shimmer-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+.newsletter-kit-submit {
+  position: relative;
+  overflow: hidden;
+  background-color: #d6dbd2;
+  color: #1a2332;
+  transition: filter 0.2s ease, box-shadow 0.2s ease;
+}
+.newsletter-kit-submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 8%,
+    rgba(255, 255, 255, 0.5) 28%,
+    rgba(0, 51, 102, 0.55) 50%,
+    rgba(255, 255, 255, 0.5) 72%,
+    rgba(255, 255, 255, 0) 92%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+.newsletter-kit-submit:hover::before {
+  animation: newsletter-kit-shimmer-sweep 0.75s ease-in-out forwards;
+}
+
+/* Loading screen - initial page load */
+.loading-screen {
+  /* Solid matte base */
+  background-color: #d6dbd2;
+  /* Subtle organic, paper-like texture (no visible lines) */
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.16) 0, transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.10) 0, transparent 60%),
+    radial-gradient(circle at 25% 80%, rgba(0, 0, 0, 0.08) 0, transparent 55%),
+    radial-gradient(circle at 75% 85%, rgba(0, 0, 0, 0.06) 0, transparent 60%);
+  background-blend-mode: soft-light, soft-light, soft-light, soft-light;
+}
+.loading-screen--out {
+  opacity: 0;
+}
+
+@keyframes loading-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes loading-dot-pulse {
+  0%, 100% { opacity: 0.5; transform: scale(0.9); background-color: #003366; }
+  50% { opacity: 1; transform: scale(1); background-color: #326ea2; }
+}
+
+/* Logo by 0.3s, Altara by 0.6s, tagline by 0.9s; dots pulse for remaining time */
+.loading-screen-logo {
+  opacity: 0;
+  animation: loading-fade-in 0.3s ease-out 0s forwards;
+}
+.loading-screen-title {
+  opacity: 0;
+  animation: loading-fade-in 0.3s ease-out 0.3s forwards;
+}
+.loading-screen-tagline {
+  opacity: 0;
+  animation: loading-fade-in 0.3s ease-out 0.6s forwards;
+}
+.loading-screen-dot {
+  background-color: #326ea2;
+  animation: loading-dot-pulse 1.2s ease-in-out infinite;
+}
+.loading-screen-dot-2 {
+  animation-delay: 0.2s;
+}
+.loading-screen-dot-3 {
+  animation-delay: 0.4s;
+}
+
+/* Same left inset as max-w-7xl mx-auto px-4 so section headings align vertically (desktop only) */
+@media (min-width: 768px) {
+  .section-content-inset {
+    padding-left: max(1rem, calc((100vw - 80rem) / 2 + 1rem));
+  }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Product page CTAs */
+.btn-cta {
+  background: linear-gradient(135deg, #003366 0%, #0a5e8c 50%, #003366 100%);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  transition: background-position 0.4s ease, box-shadow 0.3s ease;
+}
+.btn-cta:hover {
+  background-position: 100% 50%;
+  box-shadow: 0 0 20px rgba(10, 94, 140, 0.35);
+}
+.btn-sage {
+  background: linear-gradient(135deg, #bbc7a4 0%, #cdd8b8 50%, #bbc7a4 100%);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  color: #000;
+  transition: background-position 0.4s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+.btn-sage:hover {
+  background-position: 100% 50%;
+  filter: brightness(1.1);
+  box-shadow: 0 0 20px rgba(187, 199, 164, 0.4);
+}
+
+/* Product / photo imagery: smooth scaling + stable compositing (avoid crisp-edges on JPEGs) */
+.sharp-image {
+  -ms-interpolation-mode: bicubic;
+  image-rendering: auto;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Blog post template — suggested product card image (1:1) */
+.suggested-product-image {
+  aspect-ratio: 1 / 1;
+  width: 100%;
 }

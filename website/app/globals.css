@@ -1,0 +1,83 @@
+/**
+ * Global styles for the Altara website.
+ * Tailwind directives plus V0 design tokens and utilities.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F5F5F0;
+  --foreground: #231f20;
+  --card: #ffffff;
+  --card-foreground: #231f20;
+  --primary: #1a3a4a;
+  --primary-foreground: #F5F5F0;
+  --secondary: #e8e8e3;
+  --secondary-foreground: #231f20;
+  --muted: #e8e8e3;
+  --muted-foreground: #6b6b6b;
+  --accent: #5a8a7a;
+  --accent-foreground: #ffffff;
+  --border: #d4d4cf;
+  --input: #d4d4cf;
+  --ring: #1a3a4a;
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-montserrat), sans-serif;
+  }
+}
+
+/* Lora is applied to blog post H1s via the class font-lora */
+.font-lora {
+  font-family: var(--font-lora), serif;
+}
+
+/* Shimmer hover: dark -> white -> deep blue */
+@keyframes shimmer-dark {
+  0% { color: currentColor; }
+  40% { color: #ffffff; }
+  100% { color: #003366; }
+}
+
+@keyframes shimmer-light {
+  0% { color: currentColor; }
+  40% { color: #003366; }
+  100% { color: #ffffff; }
+}
+
+.shimmer-link {
+  transition: color 0.15s ease;
+}
+.shimmer-link:hover {
+  animation: shimmer-dark 0.45s ease forwards;
+}
+
+.shimmer-link-light:hover {
+  animation: shimmer-light 0.45s ease forwards;
+}
+
+@keyframes shimmer-cta {
+  0% { color: currentColor; }
+  40% { color: #003366; }
+  100% { color: #ffffff; }
+}
+
+.shimmer-cta:hover {
+  animation: shimmer-cta 0.45s ease forwards;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

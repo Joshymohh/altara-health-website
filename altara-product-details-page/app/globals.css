@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.btn-cta {
+  background: linear-gradient(135deg, #003366 0%, #0a5e8c 50%, #003366 100%);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  transition: background-position 0.4s ease, box-shadow 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-position: 100% 50%;
+  box-shadow: 0 0 20px rgba(10, 94, 140, 0.35);
+}
+
+.btn-sage {
+  background: linear-gradient(135deg, #bbc7a4 0%, #cdd8b8 50%, #bbc7a4 100%);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  color: #000;
+  transition: background-position 0.4s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.btn-sage:hover {
+  background-position: 100% 50%;
+  filter: brightness(1.1);
+  box-shadow: 0 0 20px rgba(187, 199, 164, 0.4);
+}
+
+@layer base {
+  :root {
+    --background: 48 20% 95%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 210 100% 20%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 80 20% 72%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 48 15% 90%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 80 20% 72%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 80%;
+    --input: 0 0% 85%;
+    --ring: 210 100% 20%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --bone: 48 20% 95%;
+    --sage: 80 20% 72%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
