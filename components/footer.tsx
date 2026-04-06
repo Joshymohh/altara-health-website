@@ -5,14 +5,13 @@ import { motion } from "framer-motion";
 
 const footerLinks = {
   products: [
-    { label: "Tirzepatide", href: "/tirzepatide" },
-    { label: "Weight Loss", href: "/product" },
+    { label: "Weight Loss", href: "#" },
     { label: "Longevity", href: "#" },
     { label: "Skin", href: "#" },
   ],
   company: [
-    { label: "About Us", href: "/about" },
-    { label: "Blog", href: "/blog" },
+    { label: "About Us", href: "#" },
+    { label: "Blog", href: "#" },
   ],
   support: [
     { label: "Contact Us", href: "#" },
@@ -31,17 +30,12 @@ export function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {/* Logo: stacked (SVG on top, brand text below), centered */}
+          {/* Logo & Description */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex flex-col items-center md:items-start gap-1.5 mb-4 text-center md:text-left">
-              <img
-                src="/altara-logo.svg"
-                alt="Altara Health"
-                className="h-8 w-8 sm:h-9 sm:w-9 object-contain flex-shrink-0"
-              />
-              <span className="brand-text text-primary-foreground text-sm sm:text-base leading-tight">
-                Altara Health
-              </span>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-10 h-10 border border-primary-foreground flex items-center justify-center">
+                <span className="font-serif text-xl font-bold">A</span>
+              </div>
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
               Premium peptide treatments made accessible. HSA/FSA eligible.
