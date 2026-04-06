@@ -34,28 +34,28 @@ const benefits = [
     title: "Supports Skin Elasticity",
     description:
       "Promotes supple skin, strong collagen networks, and youthful firmness through multi-pathway rejuvenation.",
-    image: "/products/GHK-Cu/ghk-cu-benefit-1.jpg",
+    image: "/products/ghk-cu/ghk-cu-benefits-1.jpg",
     alt: "GHK-Cu supports skin elasticity and collagen structure",
   },
   {
     title: "Enhances Skin Clarity & Tone",
     description:
       "Reduces hyperpigmentation, evens skin tone, and promotes radiant, luminous complexion.",
-    image: "/products/GHK-Cu/ghk-cu-benefit-2.jpg",
+    image: "/products/ghk-cu/ghk-cu-benefits-2.jpg",
     alt: "GHK-Cu improves skin tone and clarity",
   },
   {
     title: "Accelerates Cellular Renewal",
     description:
       "Enhances skin cell turnover for smoother texture and reduced appearance of fine lines.",
-    image: "/products/GHK-Cu/ghk-cu-benefit-3.jpg",
+    image: "/products/ghk-cu/ghk-cu-benefits-3.jpg",
     alt: "GHK-Cu promotes cellular skin renewal",
   },
   {
     title: "Supports Comprehensive Repair",
     description:
       "Combines tissue regeneration, barrier strengthening, and antioxidant protection for complete skin health.",
-    image: "/products/GHK-Cu/ghk-cu-benefit-4.jpg",
+    image: "/products/ghk-cu/ghk-cu-benefits-4.jpg",
     alt: "GHK-Cu supports comprehensive skin repair",
   },
 ];

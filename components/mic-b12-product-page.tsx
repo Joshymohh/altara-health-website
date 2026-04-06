@@ -14,8 +14,8 @@ import { FaqSection, type FaqItemType } from "@/components/faq-section";
 import { ProductHowItWorks } from "@/components/product-how-it-works";
 import { QualitySection } from "@/components/quality-section";
 
-/** All imagery from public/products/Liptropic-(MIC)/ only. */
-const MIC_B12_DIR = "/products/Liptropic-(MIC)";
+/** All imagery from public/products/lipotropic-mic/ only. */
+const MIC_B12_DIR = "/products/lipotropic-mic";
 
 function micB12Asset(file: string) {
   return `${MIC_B12_DIR}/${file}`;
@@ -23,15 +23,15 @@ function micB12Asset(file: string) {
 
 const productImages = [
   {
-    src: micB12Asset("Lipo-MIC-Image-1.jpg"),
+    src: micB12Asset("lipotropic-mic-image-1.jpg"),
     alt: "Lipotropic MIC plus B12 injection product from Altara",
   },
   {
-    src: micB12Asset("Lipo-MIC-Image-2.jpg"),
+    src: micB12Asset("lipotropic-mic-image-2.jpg"),
     alt: "Lipotropic MIC and B12 metabolic support packaging",
   },
   {
-    src: micB12Asset("Lipo-MIC-Image-3.jpg"),
+    src: micB12Asset("lipotropic-mic-image-3.jpg"),
     alt: "FDA-licensed Lipotropic MIC plus B12 injection",
   },
 ];
@@ -41,28 +41,28 @@ const benefits = [
     title: "Boosts Natural Energy",
     description:
       "Enhances cellular energy production for sustained vitality and mental clarity throughout your day.",
-    image: micB12Asset("mic-b12-benefit-1.jpg"),
+    image: micB12Asset("lipotropic-mic-benefits-1.jpg"),
     alt: "Lipotropic MIC plus B12 boosts natural energy",
   },
   {
     title: "Supports Fat Metabolism",
     description:
       "Helps optimize the body's ability to process and utilize fats efficiently for healthy weight management.",
-    image: micB12Asset("mic-b12-benefit-2.jpg"),
+    image: micB12Asset("lipotropic-mic-benefits-2.jpg"),
     alt: "Lipotropic MIC plus B12 supports fat metabolism",
   },
   {
     title: "Promotes Liver Health",
     description:
       "Aids in liver detoxification and supports optimal hepatic function for whole-body wellness.",
-    image: micB12Asset("mic-b12-benefit-3.jpg"),
+    image: micB12Asset("lipotropic-mic-benefits-3.jpg"),
     alt: "Lipotropic MIC plus B12 promotes liver health",
   },
   {
     title: "Enhances Mental Clarity",
     description:
       "Supports cognitive function, focus, and neurological health through essential B12 nutrition.",
-    image: micB12Asset("mic-b12-benefit-4.jpg"),
+    image: micB12Asset("lipotropic-mic-benefits-4.jpg"),
     alt: "Lipotropic MIC plus B12 enhances mental clarity",
   },
 ];

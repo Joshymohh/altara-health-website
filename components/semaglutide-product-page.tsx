@@ -34,28 +34,28 @@ const benefits = [
     title: "Supports Significant Weight Loss",
     description:
       "Powerful appetite suppression and metabolic support for meaningful, sustainable weight reduction.",
-    image: "/products/semaglutide/semaglutide-benefit-1.jpg",
+    image: "/products/semaglutide/semaglutide-benefits-1.jpg",
     alt: "Semaglutide supports significant weight loss",
   },
   {
     title: "Improves Blood Sugar Control",
     description:
       "Enhances insulin sensitivity and helps maintain healthy blood glucose levels naturally.",
-    image: "/products/semaglutide/semaglutide-benefit-2.jpg",
+    image: "/products/semaglutide/semaglutide-benefits-2.jpg",
     alt: "Semaglutide improves blood sugar control",
   },
   {
     title: "Reduces Cravings & Hunger",
     description:
       "Quiets persistent food thoughts and cravings, making healthy eating feel effortless.",
-    image: "/products/semaglutide/semaglutide-benefit-3.jpg",
+    image: "/products/semaglutide/semaglutide-benefits-3.jpg",
     alt: "Semaglutide reduces cravings and hunger",
   },
   {
     title: "Enhances Metabolic Health",
     description:
       "Supports comprehensive metabolic function including cardiovascular health markers and overall well-being.",
-    image: "/products/semaglutide/semaglutide-benefit-4.jpg",
+    image: "/products/semaglutide/semaglutide-benefits-4.jpg",
     alt: "Semaglutide enhances metabolic health",
   },
 ];

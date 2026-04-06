@@ -41,28 +41,28 @@ const benefits = [
     title: "Enhances Recovery & Repair",
     description:
       "Supports natural tissue regeneration and accelerates recovery from exercise and daily stress.",
-    image: sermorelinAsset("sermorelin-benefit-1.jpg"),
+    image: sermorelinAsset("sermorelin-benefits-1.jpg"),
     alt: "Sermorelin enhances recovery and tissue repair",
   },
   {
     title: "Improves Sleep Quality",
     description:
       "Promotes deeper, more restorative sleep patterns for better overall health and vitality.",
-    image: sermorelinAsset("sermorelin-benefit-2.jpg"),
+    image: sermorelinAsset("sermorelin-benefits-2.jpg"),
     alt: "Sermorelin improves sleep quality",
   },
   {
     title: "Supports Lean Body Composition",
     description:
       "Helps maintain healthy muscle tone while supporting efficient fat metabolism.",
-    image: sermorelinAsset("sermorelin-benefit-3.jpg"),
+    image: sermorelinAsset("sermorelin-benefits-3.jpg"),
     alt: "Sermorelin supports lean body composition",
   },
   {
     title: "Boosts Energy & Vitality",
     description:
       "Enhances natural energy production and stamina for sustained performance throughout your day.",
-    image: sermorelinAsset("sermorelin-benefit-4.jpg"),
+    image: sermorelinAsset("sermorelin-benefits-4.jpg"),
     alt: "Sermorelin boosts energy and vitality",
   },
 ];

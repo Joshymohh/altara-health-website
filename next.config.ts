@@ -12,6 +12,14 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/products/liptropic-mic",
+        destination: "/products/lipotropic-mic",
+        permanent: true,
+      },
+    ];
+  },
 };
-
 export default nextConfig;

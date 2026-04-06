@@ -16,15 +16,15 @@ import { QualitySection } from "@/components/quality-section";
 
 const productImages = [
   {
-    src: "/products/glutathione/Glutathione-Image-1.jpg",
+    src: "/products/glutathione/glutathione-image-1.jpg",
     alt: "Glutathione injection product from Altara",
   },
   {
-    src: "/products/glutathione/Glutathione-Image-2.jpg",
+    src: "/products/glutathione/glutathione-image-2.jpg",
     alt: "Glutathione antioxidant therapy packaging",
   },
   {
-    src: "/products/glutathione/Glutathione-Image-3.jpg",
+    src: "/products/glutathione/glutathione-image-3.jpg",
     alt: "Glutathione cellular protection and detox support therapy",
   },
 ];
@@ -34,28 +34,28 @@ const benefits = [
     title: "Supports Radiant Skin",
     description:
       "Promotes even tone, luminous complexion, and youthful glow from the cellular level.",
-    image: "/products/glutathione/glutathione-benefit-1.jpg",
+    image: "/products/glutathione/glutathione-benefits-1.jpg",
     alt: "Glutathione supports radiant skin and glow",
   },
   {
     title: "Enhances Detoxification",
     description:
       "Helps your body eliminate toxins naturally, supporting liver function and cellular health.",
-    image: "/products/glutathione/glutathione-benefit-2.jpg",
+    image: "/products/glutathione/glutathione-benefits-2.jpg",
     alt: "Glutathione supports detoxification and liver health",
   },
   {
     title: "Strengthens Immune Defense",
     description:
       "Bolsters your body's natural defenses against oxidative stress and environmental challenges.",
-    image: "/products/glutathione/glutathione-benefit-3.jpg",
+    image: "/products/glutathione/glutathione-benefits-3.jpg",
     alt: "Glutathione strengthens immune defense",
   },
   {
     title: "Protects Cellular Health",
     description:
       "Neutralizes free radicals and supports DNA repair for long-term vitality and resilience.",
-    image: "/products/glutathione/glutathione-benefit-4.jpg",
+    image: "/products/glutathione/glutathione-benefits-4.jpg",
     alt: "Glutathione protects cellular health and resilience",
   },
 ];

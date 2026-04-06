@@ -94,8 +94,8 @@ const navItems: NavItemData[] = [
       { label: "Lipo C", href: "/products/lipo-c", imageSrc: "/products/lipo-c/lipo-c-image-1.jpg", rx: true },
       {
         label: "Lipotropic (MIC) + B12",
-        href: "/products/Liptropic-(MIC)",
-        imageSrc: "/products/Liptropic-(MIC)/Lipo-MIC-Image-1.jpg",
+        href: "/products/lipotropic-mic",
+        imageSrc: "/products/lipotropic-mic/lipotropic-mic-image-1.jpg",
         rx: true,
       },
     ],

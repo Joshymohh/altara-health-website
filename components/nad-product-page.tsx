@@ -34,28 +34,28 @@ const benefits = [
     title: "Supports Healthy Aging",
     description:
       "Promotes cellular longevity, DNA repair, and youthful vitality from within.",
-    image: "/products/nad/nad-benefit-1.jpg",
+    image: "/products/nad/nad-benefits-1.jpg",
     alt: "NAD+ supports healthy aging and cellular longevity",
   },
   {
     title: "Sharpens Mental Clarity",
     description:
       "Enhances cognitive function, focus, and neurological health at the cellular level.",
-    image: "/products/nad/nad-benefit-2.jpg",
+    image: "/products/nad/nad-benefits-2.jpg",
     alt: "NAD+ sharpens mental clarity and cognitive function",
   },
   {
     title: "All Day Energy",
     description:
       "Fuels mitochondrial function for sustained stamina without caffeine or stimulants.",
-    image: "/products/nad/nad-benefit-3.jpg",
+    image: "/products/nad/nad-benefits-3.jpg",
     alt: "NAD+ supports all-day energy via mitochondrial function",
   },
   {
     title: "Supports Cellular Repair",
     description:
       "Aids in DNA maintenance and cellular regeneration for resilience and recovery.",
-    image: "/products/nad/nad-benefit-4.jpg",
+    image: "/products/nad/nad-benefits-4.jpg",
     alt: "NAD+ supports cellular repair and DNA maintenance",
   },
 ];

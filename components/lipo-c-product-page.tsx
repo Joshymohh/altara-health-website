@@ -14,24 +14,24 @@ import { FaqSection, type FaqItemType } from "@/components/faq-section";
 import { ProductHowItWorks } from "@/components/product-how-it-works";
 import { QualitySection } from "@/components/quality-section";
 
-/** Assets live in public/products/Lipo-C/ (folder and filenames are case-sensitive on deploy). */
-const LIPO_C_DIR = "/products/Lipo-C";
+/** Assets live in public/products/lipo-c/ (lowercase; case-sensitive on deploy). */
+const LIPO_C_DIR = "/products/lipo-c";
 
 function lipoCAsset(file: string) {
-  return `${LIPO_C_DIR}/${encodeURIComponent(file)}`;
+  return `${LIPO_C_DIR}/${file}`;
 }
 
 const productImages = [
   {
-    src: lipoCAsset("Lipo-C-Image-1.jpg"),
+    src: lipoCAsset("lipo-c-image-1.jpg"),
     alt: "Lipo C lipotropic injection product from Altara",
   },
   {
-    src: lipoCAsset("Lipo-C-Image-2.jpg"),
+    src: lipoCAsset("lipo-c-image-2.jpg"),
     alt: "Lipo C methionine inositol choline therapy packaging",
   },
   {
-    src: lipoCAsset("Lipo-C-Image-3.jpg"),
+    src: lipoCAsset("lipo-c-image-3.jpg"),
     alt: "FDA-licensed Lipo C injection for metabolic support",
   },
 ];
@@ -41,28 +41,28 @@ const benefits = [
     title: "Boosts Energy Naturally",
     description:
       "Helps optimize nutrient utilization and cellular function for sustained vitality throughout your day.",
-    image: lipoCAsset("Lipo-C- Benefits-1.jpg"),
+    image: lipoCAsset("lipo-c-benefits-1.jpg"),
     alt: "Lipo C supports natural energy and vitality",
   },
   {
     title: "Enhances Fat Metabolism",
     description:
       "Supports your body's natural ability to process and transport fats efficiently for optimal metabolic function.",
-    image: lipoCAsset("Lipo-C- Benefits-2 .jpg"),
+    image: lipoCAsset("lipo-c-benefits-2.jpg"),
     alt: "Lipo C enhances fat metabolism",
   },
   {
     title: "Promotes Metabolic Balance",
     description:
       "Combines essential lipotropic nutrients to support healthy metabolism and overall well-being.",
-    image: lipoCAsset("Lipo-C- Benefits-3.jpg"),
+    image: lipoCAsset("lipo-c-benefits-3.jpg"),
     alt: "Lipo C promotes metabolic balance",
   },
   {
     title: "Supports Liver Health",
     description:
       "Aids in liver detoxification and promotes healthy hepatic fat metabolism for whole-body wellness.",
-    image: lipoCAsset("Lipo-C- Benefits-4.jpg"),
+    image: lipoCAsset("lipo-c-benefits-4.jpg"),
     alt: "Lipo C supports liver health",
   },
 ];

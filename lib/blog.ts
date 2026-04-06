@@ -69,8 +69,8 @@ const PRODUCT_MAP: Record<string, Omit<ProductCardData, "description"> & { descr
       name: "Lipotropic (MIC) + B12",
       description:
         "MIC amino blend with B12 commonly paired with weight and energy-focused plans.",
-      link: "/products/Liptropic-(MIC)",
-      image: "/products/Liptropic-(MIC)/Lipo-MIC-Image-1.jpg",
+      link: "/products/lipotropic-mic",
+      image: "/products/lipotropic-mic/lipotropic-mic-image-1.jpg",
     },
   }
 
