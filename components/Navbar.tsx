@@ -27,6 +27,7 @@ interface NavItemData {
   href: string;
   submenu?: SubmenuItem[];
   featureImage?: string;
+  featureHref?: string;
 }
 
 /**
@@ -45,6 +46,7 @@ const navItems: NavItemData[] = [
     label: "Weight Management",
     href: "/weight-loss",
     featureImage: featureNavAsset("Feature Product - Weight Management .jpg"),
+    featureHref: "/tirzepatide",
     submenu: [
       {
         label: "Compounded Tirzepatide",
@@ -64,6 +66,7 @@ const navItems: NavItemData[] = [
     label: "Longevity & Vitality",
     href: "/products/ghk-cu",
     featureImage: featureNavAsset("Feature Product - Longevity & Vitality .jpg"),
+    featureHref: "/products/nad",
     submenu: [
       { label: "NAD+ Injection", href: "/products/nad", imageSrc: "/products/nad/nad-image-1.jpg", rx: true },
       {
@@ -84,6 +87,7 @@ const navItems: NavItemData[] = [
     label: "Metabolic Health",
     href: "/longevity",
     featureImage: featureNavAsset("Feature Product - Metabolic Health.jpg"),
+    featureHref: "/products/glutathione",
     submenu: [
       {
         label: "Glutathione",
@@ -166,17 +170,20 @@ function DesktopNavItem({ item, alignRight = false }: { item: NavItemData; align
                 ))}
               </ul>
             </div>
-            <div className="relative min-h-[300px] w-full">
+            <Link
+              href={item.featureHref ?? "#"}
+              className="group relative block min-h-[300px] w-full"
+            >
               <Image
                 src={item.featureImage ?? "/placeholder.svg?height=400&width=300"}
                 alt={`${item.label} — featured`}
                 fill
                 quality={100}
                 unoptimized={item.featureImage?.startsWith("/products/") ?? false}
-                className="object-cover object-center sharp-image"
+                className="object-cover object-center sharp-image transition-transform duration-300 group-hover:scale-105"
                 sizes="(min-width: 768px) 1200px, 100vw"
               />
-            </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -326,17 +333,21 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                                 ))}
                               </ul>
                               {item.featureImage && (
-                                <div className="relative mt-4 aspect-[4/3] w-full overflow-hidden rounded-lg border border-black/5">
+                                <Link
+                                  href={item.featureHref ?? "#"}
+                                  onClick={onClose}
+                                  className="group relative mt-4 block aspect-[4/3] w-full overflow-hidden rounded-lg border border-black/5"
+                                >
                                   <Image
                                     src={item.featureImage}
                                     alt={`${item.label} — featured`}
                                     fill
                                     quality={100}
                                     unoptimized={item.featureImage.startsWith("/products/")}
-                                    className="object-cover object-center sharp-image"
+                                    className="object-cover object-center sharp-image transition-transform duration-300 group-hover:scale-105"
                                     sizes="100vw"
                                   />
-                                </div>
+                                </Link>
                               )}
                             </motion.div>
                           )}

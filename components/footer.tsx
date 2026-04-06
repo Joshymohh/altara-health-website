@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const footerLinks = {
@@ -33,9 +34,13 @@ export function Footer() {
           {/* Logo & Description */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 border border-primary-foreground flex items-center justify-center">
-                <span className="font-serif text-xl font-bold">A</span>
-              </div>
+              <Image
+                src="/altara-logo.svg"
+                alt="Altara Health"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+              />
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
               Premium peptide treatments made accessible. HSA/FSA eligible.
